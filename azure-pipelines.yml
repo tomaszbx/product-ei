@@ -19,10 +19,10 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: '-s distribution\settings.xml package'
+    goals: '-s distribution/settings.xml package'
 - task: PublishPipelineArtifact@1
   displayName: Publish product-ei for bx artifacts
   inputs:
     artifact: wso2-ei-for-bx'
     publishLocation: 'pipeline'
-    targetPath: 'distribution\target'
+    targetPath: 'distribution/target'
